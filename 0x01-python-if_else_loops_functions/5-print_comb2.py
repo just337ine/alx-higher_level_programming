@@ -2,3 +2,4 @@
 
 for fib in range(100):
     print("{:02d}".format(fib), end=", ")
+print("{:02d}".format(99))
