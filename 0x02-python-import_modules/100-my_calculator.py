@@ -1,35 +1,27 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
+import sys
 from calculator_1 import add, sub, mul, div
-from sys import argv
 
 if __name__ == "__main__":
-
-    if len(argv) != 4:
+    if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit(1)
+        sys.exit(1)
 
-    a = int(argv[1])
-    operator = argv[2]
-    b = int(argv[3])
+    a = int(sys.argv[1])
+    operator = sys.argv[2]
+    b = int(sys.argv[3])
 
-    result = 0
-    operator_error = False
+    if operator == '+':
+        result = add(a, b)
+    elif operator == '-':
+        result = sub(a, b)
+    elif operator == '*':
+        result = mul(a, b)
+    elif operator == '/':
+        result = div(a, b)
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
 
-    match operator:
-        case '+':
-            result = add(a, b)
-        case '-':
-            result = sub(a, b)
-        case '*':
-            result = mul(a, b)
-        case '/':
-            result = div(a, b)
-        case _:
-            operator_error = True
-
-    if operator_error:
-        print("Unknow operator. Available operators: +, -, *,and /")
-        exit(1)
-
-    print("{:d} {:s} {:d} = {:d}". format(a, operator, b, result))
+    print(f"{a} {operator} {b} = {result}")
