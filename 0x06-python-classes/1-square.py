@@ -3,7 +3,10 @@
 
 
 class Square:
-    """Define a squar"""
+    """Define a square.
+    Private instance attribute: size.
+    Instantitation with size (no type/vlaue).
+    """
 
 def __init__(self, size):
         """Initialises the data"""
