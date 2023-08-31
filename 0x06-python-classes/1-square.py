@@ -8,6 +8,7 @@ class Square:
     Instantitation with size (no type/vlaue).
     """
 
+
 def __init__(self, size):
-        """Initialises the data"""
-        self.__size = size
+    """Initialises the data"""
+    self.__size = size
