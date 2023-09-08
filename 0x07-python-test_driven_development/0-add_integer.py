@@ -3,6 +3,7 @@
 A Simple addition module
 '''
 
+
 def add_integer(a, b=98):
     if type(a) is not int and type(a) is not float:
         raise TypeError('a must be an integer')
@@ -10,6 +11,7 @@ def add_integer(a, b=98):
         raise TypeError('b must be an integer')
     result = int(a) + int(b)
     return result
+
 
 if __name__ == '__main__':
     from doctest import testfile
