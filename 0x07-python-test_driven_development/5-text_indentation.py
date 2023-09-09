@@ -22,7 +22,7 @@ def text_indentation(text):
     new_text = text.replace(". ", ".")
     new_text = new_text.replace(": ", ":")
     new_text = new_text.replace("? ", "?")
-    
+
     for char in new_text:
         if char in [".", "?", ":"]:
             print(char)
