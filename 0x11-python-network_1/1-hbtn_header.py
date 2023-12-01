@@ -7,7 +7,7 @@ usage:
 import urllib.request
 import sys
 
-url = sys.argv[1]
+url = urllib.request.Request(sys.argv[1])
 with urllib.request.urlopen(url) as response:
     result = response.headers.get('X-Request-Id')
 
