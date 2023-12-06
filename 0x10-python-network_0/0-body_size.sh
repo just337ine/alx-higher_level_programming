@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # A bash script that displauys the size of the body of the url
 
 # Check if a url is provided
