@@ -1,4 +1,13 @@
 #!/usr/bin/python3
+"""
+    A class Student that defines a student by:
+        public instance attributes:
+            first_name
+            last_name
+            age
+"""
+
+
 class Student:
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
@@ -14,5 +23,8 @@ class Student:
                 for j in self.__dict__:
                     if i == j:
                         dic[i] = self.__dict__[j]
-            return dic
-        return self.__dict__
+                return dic
+            return self.__dict__
+
+    def reload_from_json(self, json):
+        return self.__dict__.update(json)
