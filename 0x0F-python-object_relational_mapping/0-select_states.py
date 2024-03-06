@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-
-#  Usage: ./0-select_states.py <mysql username> \
-#                              <mysql password> \
-#                              <database name>
-
+# Lists all states from the database.
+# Usage: ./0-select_states.py <mysql username> \
+#                             <mysql password> \
+#                             <database name>
 import sys
 import MySQLdb
 
